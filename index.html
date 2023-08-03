@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+  <head>
+    <title>Shipment Management Form</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header text-center">
+        <h2>Shipment Management Form</h2>
+      </div>
+
+      <form id="shipForm" method="get">
+        <div class="form-group">
+          <label for="shipment-No">Shipment No:</label>
+
+          <input
+            type="text"
+            class="form-control"
+            name="shipId"
+            id="shipId"
+            onchange="getShip()"
+            placeholder="Shipment-No"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            placeholder="Discription"
+            name="description"
+          />
+        </div>
+        <div class="form-group">
+          <label for="source">Source:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="source"
+            placeholder="Source"
+            name="source"
+          />
+        </div>
+        <div class="form-group">
+          <label for="destination">Destination:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="destination"
+            placeholder="Destination"
+            name="source"
+          />
+        </div>
+        <div class="form-group">
+          <label for="shipdate">Shipping-Date:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="shipdate"
+            placeholder="Shipping date"
+            name="source"
+          />
+        </div>
+        <div class="form-group">
+          <label for="expectdate">Expected-Date:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="expectdate"
+            placeholder="Expected date"
+            name="source"
+          />
+        </div>
+        <div class="form-group text-center">
+          <button
+            type="button"
+            class="btn btn-lg btn-primary"
+            id="save"
+            onclick="saveData()"
+            disabled
+          >
+            Save
+          </button>
+          <button
+            type="button"
+            class="btn btn-lg btn-primary"
+            id="change"
+            onclick="changeData()"
+            disabled
+          >
+            Change
+          </button>
+          <button
+            type="button"
+            class="btn btn-lg btn-primary"
+            id="reset"
+            onclick="resetForm()"
+            disabled
+          >
+            Reset
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
